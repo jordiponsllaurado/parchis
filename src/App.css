@@ -1,33 +1,109 @@
-.App {
+.Board {
+  display: grid;
+  color: chocolate;
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 150px 150px 150px;
+  justify-content: center;
+  margin: 30px;
+  border: 1px solid black;
+  width: 450px;
+  height: 450px;
+}
+
+.box.red {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.box.blue {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.box.green {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.box.yellow {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.cell{
+  border: 1px solid black;
+}
+
+.play {
+  display: grid;
+  grid-template:
+    " p1   .   p15 " 1fr
+    " p2   .   p14 " 1fr
+    " p3   .   p13 " 1fr
+    " p4   .   p12 " 1fr
+    " p5   .   p11 " 1fr
+    " p6   .   p10 " 1fr
+    " p7   p8  p9  " 1fr
+    / 1fr 1fr 1fr
+  ;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.p1 { grid-area: p1 }
+.p2 { grid-area: p2 }
+.p3 { grid-area: p3 }
+.p4 { grid-area: p4 }
+.p5 { grid-area: p5 }
+.p6 { grid-area: p6 }
+.p7 { grid-area: p7 }
+.p10 { grid-area: p10 }
+.p11 { grid-area: p11 }
+.p12 { grid-area: p12 }
+.p13 { grid-area: p13 }
+.p14 { grid-area: p14 }
+.p15 { grid-area: p15 }
+
+.down {
+  grid-column: 2;
+  grid-row: 3;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.right {
+  grid-column: 3;
+  grid-row: 2;
+  transform: rotate(-90deg);
 }
 
-.App-link {
-  color: #61dafb;
+.left {
+  grid-column: 1;
+  grid-row: 2;
+  transform: rotate(90deg);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.top {
+  grid-column: 2;
+  grid-row: 1;
+  transform: rotate(-180deg);
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.circle {
+  border: 1px solid black;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
 }
