@@ -1,13 +1,13 @@
 .Board {
   display: grid;
   color: chocolate;
-  grid-template-columns: 150px 150px 150px;
-  grid-template-rows: 150px 150px 150px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   justify-content: center;
-  margin: 30px;
+  margin: 5%;
   border: 1px solid black;
-  width: 450px;
-  height: 450px;
+  height: 75vh; /* Would mean 50% of Viewport height */
+  width:  75vh; /* Would mean 75% of Viewport width*/
 }
 
 .box.red {
