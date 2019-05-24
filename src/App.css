@@ -1,36 +1,69 @@
 .Board {
   display: grid;
-  color: chocolate;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  justify-content: center;
   margin: 5%;
+  height: 75vh;
+  width:  75vh;
+}
+
+[class *= player] {
   border: 1px solid black;
-  height: 75vh; /* Would mean 50% of Viewport height */
-  width:  75vh; /* Would mean 75% of Viewport width*/
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
 
-.box.red {
+[class *= player] > div {
+  height: 75%;
+  width:  75%;
+  display: table-cell;
+}
+
+.player1 {
   grid-column: 1;
   grid-row: 1;
 }
 
-.box.blue {
+.player2 {
   grid-column: 3;
   grid-row: 1;
 }
 
-.box.green {
+.player3 {
   grid-column: 1;
   grid-row: 3;
 }
 
-.box.yellow {
+.player4 {
   grid-column: 3;
   grid-row: 3;
 }
 
-.cell{
+.down {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.right {
+  grid-column: 3;
+  grid-row: 2;
+  transform: rotate(-90deg);
+}
+
+.left {
+  grid-column: 1;
+  grid-row: 2;
+  transform: rotate(90deg);
+}
+
+.top {
+  grid-column: 2;
+  grid-row: 1;
+  transform: rotate(-180deg);
+}
+
+.cell {
   border: 1px solid black;
 }
 
@@ -62,29 +95,6 @@
 .p13 { grid-area: p13 }
 .p14 { grid-area: p14 }
 .p15 { grid-area: p15 }
-
-.down {
-  grid-column: 2;
-  grid-row: 3;
-}
-
-.right {
-  grid-column: 3;
-  grid-row: 2;
-  transform: rotate(-90deg);
-}
-
-.left {
-  grid-column: 1;
-  grid-row: 2;
-  transform: rotate(90deg);
-}
-
-.top {
-  grid-column: 2;
-  grid-row: 1;
-  transform: rotate(-180deg);
-}
 
 .yellow {
   background-color: yellow;

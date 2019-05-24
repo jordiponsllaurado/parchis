@@ -30,10 +30,10 @@ class App extends React.Component {
   render () {
     return (
       <div className="Board">
-        <div className='box red circle'></div>
-        <div className='box blue circle'></div>
-        <div className='box green circle'></div>
-        <div className='box yellow circle'></div>
+        <div className='player1'><div className='circle red'></div></div>
+        <div className='player2'><div className='circle blue'></div></div>
+        <div className='player3'><div className='circle green'></div></div>
+        <div className='player4'><div className='circle yellow'></div></div>
         <div className='box play down'>
           { this.renderFinalPath('yellow') }
           { this.renderPath(61, 75, 'yellow')}
